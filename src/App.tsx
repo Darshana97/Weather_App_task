@@ -1,11 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Layout from './containers/Layout';
 
 function App() {
   return (
     <div className="App">
-      Hello
+       <Layout/>
     </div>
   );
 }
