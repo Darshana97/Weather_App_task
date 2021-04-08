@@ -52,19 +52,20 @@ function Layout() {
                             <div className="card" style={ { width: "18rem" } }>
                                 {/* <img src="https://www.focus2move.com/wp-content/uploads/2020/01/Tesla-Roadster-2020-1024-03.jpg" className="card-img-top" alt="image"/> */}
                                 <div className="card-body">
-                                    { console.log("SS", searchResults?.data.current.weather[0].main)}
-                                    <h4 className="card-title">{ searchResults?.data.timezone}</h4>
+                                    { console.log("SS", searchResults?.data.current.weather[0].icon)}
+                                    <h4 className="card-title">{ searchResults?.data.timezone }</h4>
+                                    <img src={ `http://openweathermap.org/img/wn/${searchResults?.data.current.weather[0].icon}@2x.png` } />
                                     <p className="card-text">
                                         <h5>{ `Weather : ${searchResults?.data.current.weather[ 0 ].main}` }</h5>
                                         <h5>{ `Description : ${searchResults?.data.current.weather[0].description}`}</h5>
                                         <h5>{ `Temprature : ${searchResults?.data.current.temp} F` }</h5>
-                                        <i>{ }</i>
+                                        
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div className="row justify-content-md-center">
-                            <WeatherCarousel />
+                            <WeatherCarousel data={searchResults} />
                          </div>
                     </div>
                 </div>
