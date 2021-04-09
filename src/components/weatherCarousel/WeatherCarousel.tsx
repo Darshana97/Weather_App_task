@@ -12,60 +12,66 @@ function WeatherCarousel(data: any) {
         <div>
          { console.log("From Props", data.data?.data.daily[2])}
             <Carousel>
-                <div>
-                    <img src={ `http://openweathermap.org/img/wn/${data.data?.data.daily[ 0 ].weather[ 0 ].icon}@2x.png` } />
-                    <p className="legend">{ data.data?.data.daily[ 0 ].weather[ 0 ].description }
+                <div>                 
+                    <img  src={ `http://openweathermap.org/img/wn/${data.data?.data.daily[ 0 ].weather[ 0 ].icon}@2x.png` } />
+                    <p className="legend">
+                        
+                        Day: { moment().format('dddd') }
                         <br />
-                        Humidity: { data.data?.data.daily[ 0 ].humidity }
+                        { data.data?.data.daily[ 0 ].weather[ 0 ].description }
                         <br />
-                        Humidity: { data.data?.data.daily[ 0 ].humidity }
+                        Temperature: { data.data?.data.daily[ 0 ].temp.day } °F
                         <br />
-                        Humidity: { moment().format('dddd') }
+                        Humidity: { data.data?.data.daily[ 0 ].humidity }%
                     </p>
                     
                 </div>
                 <div>
                     <img src={`http://openweathermap.org/img/wn/${data.data?.data.daily[1].weather[0].icon}@2x.png`} />
-                    <p className="legend">{ data.data?.data.daily[ 1 ].weather[ 0 ].description }
+                    <p className="legend">
+                        Day: { moment().add(1, 'days').format('dddd') }
+                        <br/>
+                        { data.data?.data.daily[ 1 ].weather[ 0 ].description }
                         <br />
-                        Humidity: { data.data?.data.daily[ 1 ].humidity }
+                        Temperature: { data.data?.data.daily[ 1 ].temp.day } °F
                         <br />
-                        Humidity: { data.data?.data.daily[ 1 ].humidity }
-                        <br />
-                        Humidity: { moment().add(1, 'days').format('dddd') }
+                        Humidity: { data.data?.data.daily[ 1 ].humidity }%
                     </p>
                 </div>
                 <div>
                     <img src={`http://openweathermap.org/img/wn/${data.data?.data.daily[2].weather[0].icon}@2x.png`} />
-                    <p className="legend">{ data.data?.data.daily[ 2 ].weather[ 0 ].description }
+                    <p className="legend">
+                        Day: { moment().add(2, 'days').format('dddd') }
+                        <br/>
+                        { data.data?.data.daily[ 2 ].weather[ 0 ].description }
                         <br />
-                        Humidity: { data.data?.data.daily[ 2 ].humidity }
+                        Temperature: { data.data?.data.daily[ 2 ].temp.day } °F
                         <br />
-                        Humidity: { data.data?.data.daily[ 2 ].humidity }
-                        <br />
-                        Humidity: { moment().add(2, 'days').format('dddd') }
+                        Humidity: { data.data?.data.daily[ 2 ].humidity }%
                     </p>
                 </div>
                 <div>
                    <img src={`http://openweathermap.org/img/wn/${data.data?.data.daily[3].weather[0].icon}@2x.png`} />
-                    <p className="legend">{ data.data?.data.daily[ 3 ].weather[ 0 ].description }
+                    <p className="legend">
+                        Day: { moment().add(3, 'days').format('dddd') }
+                        <br/>
+                        { data.data?.data.daily[ 3 ].weather[ 0 ].description }
                         <br />
-                        Humidity: { data.data?.data.daily[ 3 ].humidity }
+                        Temperature: { data.data?.data.daily[ 3 ].temp.day } °F
                         <br />
-                        Humidity: { data.data?.data.daily[ 3 ].humidity }
-                        <br />
-                        Humidity: { moment().add(3, 'days').format('dddd') }
+                        Humidity: { data.data?.data.daily[ 3 ].humidity }%
                     </p>
                 </div>
                 <div>
                     <img src={`http://openweathermap.org/img/wn/${data.data?.data.daily[4].weather[0].icon}@2x.png`} />
-                    <p className="legend">{ data.data?.data.daily[ 4 ].weather[ 0 ].description }
+                    <p className="legend">
+                        Day: { moment().add(4, 'days').format('dddd') }
+                        <br/>
+                        { data.data?.data.daily[ 4 ].weather[ 0 ].description }
                         <br />
-                        Humidity: { data.data?.data.daily[ 4 ].humidity }
+                        Temperature: { data.data?.data.daily[ 4 ].temp.day } °F
                         <br />
-                        Humidity: { data.data?.data.daily[ 4 ].humidity }
-                        <br />
-                        Humidity: { moment().add(4, 'days').format('dddd') }
+                        Humidity: { data.data?.data.daily[ 4 ].humidity }%
                     </p>
                 </div>                              
             </Carousel>
